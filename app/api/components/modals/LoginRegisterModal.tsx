@@ -135,7 +135,7 @@ const LoginRegisterModal = () => {
         <div className="justify-center flex flex-row items-center gap-2">
           <div>{content.footerTitle}</div>
           <div
-            onClick={loginRegisterModal.onClose}
+            onClick={()=>modal === "register" ? loginRegisterModal.switchModals("login") : loginRegisterModal.switchModals("register")}
             className="text-neutral-800 cursor-pointer hover:underline"
           >
             {content.footerSubtitle}

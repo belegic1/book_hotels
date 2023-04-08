@@ -7,6 +7,7 @@ import TosaterProvider from './providers/TosaterProvider'
 import LoginModal from './api/components/modals/LoginModal'
 import getCurrentUser from './actions/getCurrentUser'
 import LoginRegisterModal from './api/components/modals/LoginRegisterModal'
+import RentModal from './api/components/modals/RentModal'
 
 export const metadata = {
   title: 'Hotels',
@@ -31,6 +32,7 @@ export default async function RootLayout({
           <RegisterModal   />
           <LoginModal />
           <LoginRegisterModal />
+          <RentModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
         {children}
