@@ -4,6 +4,9 @@ import Navbar from './api/components/navbar/Navbar'
 import './globals.css'
 import { Nunito } from 'next/font/google'
 import TosaterProvider from './providers/TosaterProvider'
+import LoginModal from './api/components/modals/LoginModal'
+import getCurrentUser from './actions/getCurrentUser'
+import LoginRegisterModal from './api/components/modals/LoginRegisterModal'
 
 export const metadata = {
   title: 'Hotels',
@@ -14,18 +17,21 @@ const font = Nunito({
   subsets: ["latin"]
 })
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+  }) {
+  const currentUser = await getCurrentUser()
   return (
     <html lang="en">
       <body className={font.className}>
         <ClientOnly>
           <TosaterProvider />
-          <RegisterModal isOpen={true} actionLabel='Submit'  />
-          <Navbar />
+          <RegisterModal   />
+          <LoginModal />
+          <LoginRegisterModal />
+          <Navbar currentUser={currentUser} />
         </ClientOnly>
         {children}
       </body>
