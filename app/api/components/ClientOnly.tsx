@@ -8,7 +8,7 @@ const ClientOnly:React.FC<ClientOnlyProps> = ({children}) => {
   useEffect(() => {
     setHasMountend(true)
   }, [])
-  if (!hasMountend) return null;
+  if (!hasMountend) return <div>Loading</div>;
   return (
     <>{ children}</>
   )

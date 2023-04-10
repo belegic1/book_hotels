@@ -29,13 +29,13 @@ export default async function RootLayout({
       <body className={font.className}>
         <ClientOnly>
           <TosaterProvider />
-          <RegisterModal   />
+          <RegisterModal />
           <LoginModal />
           <LoginRegisterModal />
           <RentModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
-        {children}
+        <div className='p-20 pt-28'>{children}</div>
       </body>
     </html>
   );
