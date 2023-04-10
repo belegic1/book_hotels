@@ -19,7 +19,6 @@ const LoginRegisterModal = () => {
   const router = useRouter()
 
   const { modal } = loginRegisterModal;
-  console.log(loginRegisterModal.modal)
   const {
     register,
     handleSubmit,

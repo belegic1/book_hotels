@@ -45,19 +45,19 @@ model Account{
   @@unique([provider, providerAccountId])
 }
 
-model Listing{
-  id    String  @id @default(auto()) @map("_id") @db.ObjectId
+model Listing {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
   title String
   description String
   imageSrc String
   createdAt DateTime @default(now())
-  category String
+  category  String
   roomCount Int
   bathroomCount Int
   guestCount Int
-  locationValue String 
+  locationValue String
   userId String @db.ObjectId
-  proce Int
+  price Int
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   reservations Reservation[]
 }
