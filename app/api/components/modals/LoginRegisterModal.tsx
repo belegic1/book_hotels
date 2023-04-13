@@ -63,6 +63,7 @@ const LoginRegisterModal = () => {
         .post('/api/register', data)
       .then(() => {
         loginRegisterModal.onClose();
+        loginRegisterModal.onOpen("login")
       })
       .catch((err) => toast.error('Something goes wrong'))
       .finally(() => setIsLoading(false));
