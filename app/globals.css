@@ -7,9 +7,21 @@ html,
 body,
 :root{
   height: 100%;
-
 }
 
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: #000000df;
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: black;
+  }
+} */
 .leaflet-bottom,
 .leaflet-control,
 .leaflet-pane,

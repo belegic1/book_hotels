@@ -71,7 +71,9 @@ const Modal: React.FC<ModalProps> = ({
             ${showModal ? 'translate-y-0' : 'translate-y-full'}
             ${showModal ? 'opacity-100' : 'opacity-0'}`} 
           >
-            <div className='tarnslate h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relaive flex flex-col w-full bg-white outline-none focus:outline-none'>
+            <div className='tarnslate h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relaive flex flex-col w-full 
+            bg-white
+             outline-none focus:outline-none'>
               {/* Header  */}
               <div className='flex items-center p-6 rounded-top justify-center relative border-b-[1px]'>
                 <button

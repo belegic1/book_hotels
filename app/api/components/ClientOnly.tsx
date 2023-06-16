@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react'
+import Loader from './Loadir';
 interface ClientOnlyProps{
   children: React.ReactNode
 }
@@ -8,7 +9,7 @@ const ClientOnly:React.FC<ClientOnlyProps> = ({children}) => {
   useEffect(() => {
     setHasMountend(true)
   }, [])
-  if (!hasMountend) return <div>Loading</div>;
+  if (!hasMountend) return <Loader />;
   return (
     <>{ children}</>
   )

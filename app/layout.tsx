@@ -8,6 +8,7 @@ import LoginModal from './api/components/modals/LoginModal'
 import getCurrentUser from './actions/getCurrentUser'
 import LoginRegisterModal from './api/components/modals/LoginRegisterModal'
 import RentModal from './api/components/modals/RentModal'
+import SearchModal from './api/components/modals/SearchModal'
 
 export const metadata = {
   title: 'Hotels',
@@ -33,6 +34,7 @@ export default async function RootLayout({
           <LoginModal />
           <LoginRegisterModal />
           <RentModal />
+          <SearchModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
         <div className='p-20 pt-28'>{children}</div>

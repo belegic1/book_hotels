@@ -52,6 +52,8 @@ const ListingClient: React.FC<IListingClient> = ({
     return dates;
   }, [reservations])
 
+  console.log({reservations})
+
   const [isLoading, setIsLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(listing.price);
   const [dateRange, setDateRange] = useState<Range>(initialDateRange);
